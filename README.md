@@ -1,7 +1,7 @@
 # Getting Started with Create React App
-Clone the repos and move to cd books
-type npm install
-and start the project npm init
+Clone the repos and move to cd books.\
+type npm install.\
+and start the project npm init.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
