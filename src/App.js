@@ -2,10 +2,12 @@ import './App.css';
 import { Badge,Col} from 'reactstrap';
 import Book from './components/BookComponent';
 import React from 'react';
+import {BrowserRouter,Route} from 'react-router-dom';
+
 
 function App() {
   return (
-
+<BrowserRouter>
     <div className="App">
       <div className="container mt-5">
             <div className="row">
@@ -16,10 +18,13 @@ function App() {
           </div>
           <div className="container mt-5 ">
             <div className="row">
-              <Book/>
+              <Route>
+                   <Book/>
+              </Route>
             </div>
           </div>
     </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,44 +1,37 @@
-import React, {Component}  from 'react';
-import { Card, CardImg, CardBody,
-  CardTitle,CardSubtitle} from 'reactstrap';
-
-class Book extends Component{
-
-  state ={
-    loading: true,
-    book: null
-  };
-
-async componentDidMount(){
-      const url = "https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=7zNmG09lSAhkcNJnefMzmXRYvAyR24Pn";
-      const response = await fetch(url);
-      const data = await response.json();
-      this.setState({book: data.results.lists[3], loading: false});
+import React, { useEffect, useState } from 'react';
 
 
-}
+function Book() {
+  const[books, setBooks] = useState([]);
 
-render(){
+  useEffect(() => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=7zNmG09lSAhkcNJnefMzmXRYvAyR24Pn`,{
+      method: "GET"
+    })
+    .then(res=>res.json())
+    .then(res=>setBooks(res.results.lists))
+    .catch(err=>console.log(err));
+  },[]);
+
   return (
-  <div>
-     {this.state.loading || !this.state.book? (
-     <div>Loading</div> 
-     ) : (
-        <div>
-            <Card>
-                  <CardImg width="100%" src={this.state.book.list_image} />
-                  <CardBody >
-                  <CardTitle   style={{textAlign: "left"}}  >{this.state.book.list_name}</CardTitle>
-                  <CardSubtitle style={{textAlign: "left"}}>{this.state.book.display_name}</CardSubtitle>
-                  <CardSubtitle style={{textAlign: "left"}}>{this.state.book.updated}</CardSubtitle>
-                  </CardBody>
-            </Card>
-
+   <div className="container">
+     <div class="row">
+     <div className="col-8 col-md-5 ">
+      {books.map((item, index) => <div
+       key={index}
+       className="card">
+        <img src="https://s1.nyt.com/du/books/images/9780385545969.jpg" className="card-img-top" alt="Game of thrones" />
+        <div className="card-body">
+           <h5 className="card-title">{item.list_name}</h5>
+           <a href="#" className="btn btn-primary">Buy</a>
+         </div>
         </div>
-     )}
+      )}
       </div>
+      </div>
+   </div>
+   
   );
-}
 }
 
 export default Book;
