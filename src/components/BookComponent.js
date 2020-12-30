@@ -16,14 +16,15 @@ function Book() {
   return (
    <div className="container">
      <div class="row">
-     <div className="col-8 col-md-5 ">
+     <div className="col-8 col-md-4 ">
       {books.map((item, index) => <div
        key={index}
        className="card">
-        <img src="https://s1.nyt.com/du/books/images/9780385545969.jpg" className="card-img-top" alt="Game of thrones" />
+        <img src='item.list_image'/>
         <div className="card-body">
            <h5 className="card-title">{item.list_name}</h5>
-           <a href="#" className="btn btn-primary">Buy</a>
+           <h5 className="card-title">{item.updated}</h5>
+           <a href="{item.books.amazon_product_url}" className="btn btn-primary">Buy</a>
          </div>
         </div>
       )}
