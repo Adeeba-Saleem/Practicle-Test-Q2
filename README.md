@@ -2,7 +2,7 @@
 Clone the repos and move to <b>cd books</b>.\
 type <b>npm install</b>.\
 and start the project <b>npm start</b>.\
-we can create own <b>API key</b> fetch the data
+we can create own <b>API key</b> to fetch the data.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
