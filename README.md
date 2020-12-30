@@ -1,13 +1,13 @@
 # Getting Started with Create React App
+Clone the repos and move to cd books
+type npm install
+and start the project npm init
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
-Clone the repos and move to cd books
-type npm install
-and start the project npm init
 
 
 ### `npm start`
