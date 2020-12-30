@@ -1,9 +1,14 @@
 # Getting Started with Create React App
-Clone the repos and move to cd books.\
-type npm install.\
-and start the project npm init.
+Clone the repos and move to <b>cd books</b>.\
+type <b>npm install</b>.\
+and start the project <b>npm start</b>.\
+we can create own <b>API key</b> fetch the data
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Developemnt project screen shot
+
+<img width="960" alt="Screenshot 2020-12-30 163031" src="https://user-images.githubusercontent.com/49194930/103347299-9770ef00-4abc-11eb-91cb-58707411e0d1.png">
 
 ## Available Scripts
 
