@@ -6,7 +6,7 @@ we can create own <b>API key</b> to fetch the data.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Developemnt project screen shot
+##  Screen shot shot of my web
 
 <img width="960" alt="Screenshot 2020-12-30 163031" src="https://user-images.githubusercontent.com/49194930/103347299-9770ef00-4abc-11eb-91cb-58707411e0d1.png">
 
